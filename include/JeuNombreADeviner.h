@@ -1,10 +1,10 @@
 /*************************************************/
-// Nom du projet: Jeu du nombre à deviner
+// Nom du projet: Jeu du nombre Ã  deviner
 // Nom du fichier: JeuNombreADeviner.h
 // Version : 1.0
 // Nom du programmeur: MP Pinaud
-// Date de création : 25/01/2021
-// Rôle du fichier: Contient la déclaration du type pour représenter un joueur
+// Date de crÃ©ation : 25/01/2021
+// RÃ´le du fichier: Contient la dÃ©claration du type pour reprÃ©senter un joueur
 // et les fonctions concernant le jeu
 // Nom des composants utilises: string
 // Historique du fichier:
@@ -13,71 +13,68 @@
 using namespace std;
 
 //Type: structure TJoueur
-// Rôle : représente un joueur. Définit les propriétés d'un joueur.
+// RÃ´le : reprÃ©sente un joueur. DÃ©finit les propriÃ©tÃ©s d'un joueur.
 
-typedef struct {
+typedef struct{
 
-string nom;  // nom du joueur
+string Nom;  // nom du joueur
 int nbPartiesJouees;
 int nbPartiesGagnees;
 int nbTentatives;
 } TJoueur;
 
-
-
-
-
 // Nom :InitJoueur
-// Rôle : Crée un joueur. Initialise toutes les informations du joueur.
-//        Le nombre de tentatives, de parties gagnées et de parties jouées seront à 0.
-// Paramètres d'entrée :
-// Paramètres de sortie :
-// Paramètres d'entrée/sortie :
+// RÃ´le : CrÃ©e un joueur. Initialise toutes les informations du joueur.
+//        Le nombre de tentatives, de parties gagnÃ©es et de parties jouÃ©es seront Ã  0.
+// ParamÃ¨tres d'entrÃ©e : un_nom
+// ParamÃ¨tres de sortie : &joueurAcreer
+// ParamÃ¨tres d'entrÃ©e/sortie :
 
 void InitJoueur (TJoueur &joueurAcreer, string un_nom);
 
 
 // Nom :TirerNombreMystere
-// Rôle : Tire aléatoirement un nombre à deviner entre 0 et 10
-// Valeur de retour : nombre à deviner
+// RÃ´le : Tire alÃ©atoirement un nombre Ã  deviner entre 0 et 10
+// Valeur de retour : nombre Ã  deviner
 
 int TirerNombreMystere();
 
 // Nom :JouerPartie
-// Rôle : Fait jouer une partie au joueur passé en paramètre
-//        A la fin, met à jour les informations du joueur
-// Paramètres d'entrée:
-// Paramètres de sortie:
-// Paramètres d'entrée/sortie :
+// RÃ´le : Fait jouer une partie au joueur passÃ© en paramÃ¨tre
+//        A la fin, met Ã  jour les informations du joueur
+// ParamÃ¨tres d'entrÃ©e: nombreADeviner
+// ParamÃ¨tres de sortie:
+// ParamÃ¨tres d'entrÃ©e/sortie : &un_joueur
 
 void JouerPartie (TJoueur &un_joueur, int nombreADeviner);
 
 // Nom : MajResultatsJoueur
-// Rôle : met à jour les informations du joueur passé en paramètre
-// Paramètres d'entrée:
-// Paramètres de sortie:
-// Paramètres d'entrée/sortie :
+// RÃ´le : met Ã  jour les informations du joueur passÃ© en paramÃ¨tre
+// ParamÃ¨tres d'entrÃ©e: nbEssais, gagne
+// ParamÃ¨tres de sortie:
+// ParamÃ¨tres d'entrÃ©e/sortie : joueur
 
-void MajResultatsJoueur(TJoueur joueur, int nbEssais, bool gagne);
+void MajResultatsJoueur(TJoueur &joueur, int nbEssais, bool gagne);
 
 
 
 // Nom : ResultatsJoueur
-// Rôle : indique les résultats du joueur passé en paramètre
-//        le nombre de parties gagnées, le nombre de parties perdues, le nombre d'essais total
-//        La fonction N'affiche PAS les informations à l'écran
-// Paramètres d'entrée:
-// Paramètres de sortie:
-// Paramètres d'entrée/sortie :
+// RÃ´le : indique les rÃ©sultats du joueur passÃ© en paramÃ¨tre
+//        le nombre de parties gagnÃ©es, le nombre de parties perdues, le nombre d'essais total
+//        La fonction N'affiche PAS les informations Ã  l'Ã©cran
+// ParamÃ¨tres d'entrÃ©e: joueur
+// ParamÃ¨tres de sortie: nbsucess, nbechec, nbessais
+// ParamÃ¨tres d'entrÃ©e/sortie :
 
 void ResultatsJoueur(TJoueur joueur, int &nbsucces, int &nbechec, int & nbessais);
 
 
 // Nom :Nom
-// Rôle : retourne le nom du joueur
-// Paramètres d'entrée: le joueur dont on veut le nom
+// RÃ´le : retourne le nom du joueur
+// ParamÃ¨tres d'entrÃ©e: le joueur dont on veut le nom
 // Valeur de retour : nom du joueur
 
 string Nom(TJoueur joueur);
+
 
 
