@@ -1,23 +1,31 @@
 /*************************************************/
-// Nom du projet: Jeu du nombre à deviner
+// Nom du projet: Jeu du nombre Ã  deviner
 // Nom du fichier: MainJeuNombreAdeviner.cpp
 // Version : 1.0
 // Nom du programmeur: MP Pinaud
-// Date de création : 25/01/2021
-// Rôle du fichier: Contient le code jeu
+// Date de crÃ©ation : 25/01/2021
+// RÃ´le du fichier: Contient le code jeu
 // Nom des composants utilises: JeuNombreADeviner.h
 //                              iostream
 // Historique du fichier:
 /*************************************************/
 #include <iostream>
-using namespace std;
-
+#include <ctime>
 #include "../include/JeuNombreADeviner.h"
+
 
 int main()
 {
-    cout << "Vous allez jouer pour deviner un nombre secret" << endl;
 
-    return 0;
+    std::cout << "Vous allez jouer pour deviner un nombre secret" << std::endl;
+    TJoueur joueur1;
+    InitJoueur(joueur1,"Jauffrey");
+    std::cout << joueur1.Nom;
+    int n{10};
+    int found_mystery = std::rand () % n;
+    JouerPartie(joueur1,found_mystery);
+    int nbEssais{};
+    MajResultatsJoueur(joueur1,4,true);
+
+  return 0;
 }
-
