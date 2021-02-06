@@ -121,7 +121,17 @@ void MajResultatsJoueur(TJoueur joueur, int nbEssais, bool gagne)
 
 void ResultatsJoueur(TJoueur joueur, int& nbsucces, int& nbechec, int& nbessais)
 {
-    // A COMPLETER
+     int Number_Try{};
+    int Hapless_Draw{};
+    int found_mystery{};
+    int i{};
+
+ TJoueur joueur1;
+ TirerNombreMystere(Hapless_Draw);
+ Number_Try=nbEssais;
+ found_mystery = true;
+ i = false;
+  
 }
 
 // Nom :Nom
