@@ -2,12 +2,12 @@
 // Nom du projet: Jeu du nombre à deviner
 // Nom du fichier: JeuNombreADeviner.h
 // Version : 1.0
-// Nom du programmeur: MP Pinaud
+// Nom du programmeur: MP Pinaud / Jauffrey Bicheyre
 // Date de création : 25/01/2021
 // Rôle du fichier: Contient la déclaration du type pour représenter un joueur
 // et les fonctions concernant le jeu
 // Nom des composants utilises: string
-// Historique du fichier:
+// Historique du fichier: MainJeuNombreADeviner.cpp, JeuNombreADeviner.cpp et paramètres d'entrée, sortie et entrée/sortie des fonctions
 /*************************************************/
 #include <string>
 using namespace std;
@@ -75,6 +75,5 @@ void ResultatsJoueur(TJoueur joueur, int &nbsucces, int &nbechec, int & nbessais
 // Valeur de retour : nom du joueur
 
 string Nom(TJoueur joueur);
-
 
 
