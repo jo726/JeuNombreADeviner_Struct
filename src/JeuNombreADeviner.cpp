@@ -2,13 +2,13 @@
 // Nom du projet: Jeu du nombre à deviner
 // Nom du fichier: JeuNombreADeviner.cpp
 // Version : 1.0
-// Nom du programmeur: MP Pinaud
+// Nom du programmeur: MP Pinaud / Jauffrey Bicheyre
 // Date de création : 25/01/2021
 // Rôle du fichier: Contient le code des fonctions du jeu
 // Nom des composants utilises: JeuNombreADeviner.h
 //                              iostream
 //                              ctime
-// Historique du fichier:
+// Historique du fichier: MainJeuNombreADeviner.cpp, JeuNombreADeviner.cpp et paramètres d'entrée, sortie et entrée/sortie des fonctions
 /*************************************************/
 #include <iostream>
 #include <ctime>
@@ -99,14 +99,12 @@ std::srand (time(nullptr));
 // Paramètres de sortie:
 // Paramètres d'entrée/sortie :
 
-void MajResultatsJoueur(TJoueur joueur, int nbEssais, bool gagne)
+void MajResultatsJoueur(TJoueur &joueur, int nbEssais, bool gagne)
 {
     int Number_Try{};
-    int Hapless_Draw{};
     int found_mystery{};
 
  TJoueur joueur1;
- TirerNombreMystere(Hapless_Draw);
  Number_Try=nbEssais;
  found_mystery = true;
 }
@@ -119,19 +117,19 @@ void MajResultatsJoueur(TJoueur joueur, int nbEssais, bool gagne)
 // Paramètres de sortie:
 // Paramètres d'entrée/sortie :
 
-void ResultatsJoueur(TJoueur joueur, int& nbsucces, int& nbechec, int& nbessais)
+void ResultatsJoueur(TJoueur joueur, int& nbsuccess, int& nbechec, int& nbessais)
 {
-     int Number_Try{};
-    int Hapless_Draw{};
+    int Number_Try{};
     int found_mystery{};
     int i{};
 
  TJoueur joueur1;
- TirerNombreMystere(Hapless_Draw);
- Number_Try=nbEssais;
+ Number_Try=nbessais;
  found_mystery = true;
+ found_mystery == nbsuccess;
  i = false;
-  
+ nbechec == i;
+
 }
 
 // Nom :Nom
